@@ -24,7 +24,7 @@ function age_calculator(year,month, date){
     let today_date = today.getDate();
     let today_year = today.getFullYear();
     //console.log(today_month + " " + today_date + " " + today_year);
-    if((date > today_date && (month >= today_month || year >= today_year)) || month > today_month || year > today_year){
+    if((date > today_date && month >= today_month && year >= today_year) || (month > today_month && year > today_year) || year > today_year){
         document.getElementById('show').innerHTML = "Hello Friend , You can't be Earlier than today :)"
     }
     else if(date == today_date && month == today_month && year == today_year){
